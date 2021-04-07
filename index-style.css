@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#logo {
+    width: 200px ;
+    height: 50px;
+}
+.main_section-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto;
+    background-image: url(img/page.png);
+    padding: 1rem 0;
+}
+.main_section-grid > .grid-item:nth-child(1) {
+    grid-column: 1/5;
+}
+.main_section-grid > .grid-item:nth-child(1) p{
+    color: #0a0925 ;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+.main_section-grid > .grid-item:nth-child(2) {
+    grid-column: 5/10;
+}
+.btn.theme-btn {
+    background-color: #fea71a;
+    padding: 0px 36px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #0a0925;
+    font-weight: 500;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    height: 60px;
+    line-height: 60px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.btn.theme-btn:hover {
+    background-color: #0a0925;
+    color: #fff ;
+} 
+@media (max-width: 1000px) {
+    #totalChart {
+        max-width:100%;
+        max-height:100%;
+    }
+}
+@media (max-width: 970px) {
+    .main_section-grid > .grid-item:nth-child(1) {
+        grid-column: 1/10;
+    }
+    .main_section-grid > .grid-item:nth-child(2) {
+        grid-column: 1/10;
+        grid-row: 2/3;
+    }
+}
+.table {
+    overflow: hidden !important;
+    border: 2px solid #fff ;
+    border-radius: 4px;
+    border: 2px solid #eee !important;
+}
+
+/* .odd {
+    background-color: #0a0925 !important;
+    color:#8638a6 ;
+    font-weight: 600;
+}
+.even {
+    background-color: #eee !important;
+    color:#8638a6 ;
+    font-weight: 600;
+} */
+/* .odd:hover , .even:hover {
+    background-color: rgb(197, 197, 197) !important;
+} */
+th {
+    color: #2196f3
+}
+.btn-primary {
+    background-color: #2196f3 !important;
+    border: none !important ;
+    padding: 8px 36px ;
+    color: rgba(255, 255, 255, 0.8) !important ;
+
+}
+.btn-primary:hover {
+    background-color: #0a0925 !important;
+    transition: .3s all;
+    color: #fff !important
+}
+#statistics_filter {
+    color:#fff
+}
+#statistics_filter  input{
+    border-radius: 20px;
+    border: 2px solid #fea71a;
+    padding-left: 20px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #2196f3 !important;
+    color: #2196f3 !important ;
+    font-weight: 600;
+}
+#bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#bar .__nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+#bar .__nav ul li {
+    margin: 20px;
+    margin-top: 30px
+}
+#bar .__nav ul li a {
+    color: #1c2e48 ;
+    font-weight: 600 ;
+}
+#bar .__nav ul li:hover a {
+    color: #706ad4 ;
+    text-decoration: none;
+    transition: .3s;
+}
+#bar .__nav ul li .btn {
+    -webkit-box-shadow: 0 20px 30px 0 rgb(204 193 37 / 20%);
+    box-shadow: 0 20px 30px 0 rgb(204 193 37 / 20%);
+    background-color: #fea71a;
+    padding: 1rem 2rem;
+    color: #1c2e48
+}
+#bar .__nav ul li .btn:hover {
+    color: #fff
+}
+.drop-down {
+    background-color: #0a0925;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: -200%;
+    width: 100%;
+    height: 100%;
+    transition: .5s all;
+}
+.drop-down .drop-content ul{
+    line-height: 50px;
+    text-align: center;
+    padding: 0;
+}
+.drop-down .drop-content ul li a{
+    color:#fff ;
+    font-size: 30px;
+    font-weight: 600;
+}
+#open-drop {
+    color: #fea71a ;
+    font-size: 30px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: none;
+}
+#close-drop {
+    color: #fff ;
+    position: absolute;
+    top: 20px ;
+    right: 20px;
+    font-size: 40px;
+    cursor: pointer;
+}
+@media (max-width: 920px) {
+    #open-drop {
+        display: block;
+        cursor: pointer;
+    }
+    #bar #__nav {
+        display: none !important; 
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Covid-19</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+        <script src="country.js"></script>
+        <!-- <link rel="stylesheet" href="home_style.css"> -->
+        <link rel="stylesheet" href="country.css">
+    </head>
+    <body>
+        <section class="main_section container-fluid p-0">
+            <div class="text-center p-1" id="pageContent">
+                <span class="mt-0" id="countryFlag"></span><img src="img/logo-dark.png" alt="logo" id="logo">
+            </div>
+            <div id="main_section_grid" class="p-3 pt-5">
+                <div class="grid-item">
+                    <p id="__p">Detailed stats on the epidemiological situation in <span class="text-center" id="countryName" style="color: #fea71a"></span></p>
+                    <a href="index.html" class="btn theme-btn mt-3"> <i class="las la-calendar mr-2 mb-2"></i>Back </a>
+                </div>
+                <div class="grid-item">
+                    <img src="img/map.svg" id="img-map" alt=""><br/>
+                </div>
+            </div>
+        </section>
+        <section class="statistics-grid container-fluid">
+            <div class="grid-item">
+                <div class="state">
+                    <p>Total Cases : <span id="total"></span></p>
+                </div>
+                <div class="state">
+                    <p>Today's Cases : <span id="todayCases"></span></p>
+                </div>
+                <div class="state">
+                    <p>Total Deaths : <span id="deaths"></span></p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="state">
+                    <p>Today's Deaths : <span id="todayDeaths"></span></p>
+                </div>
+                <div class="state">
+                    <p>Active Cases : <span id="active"></span></p>
+                </div>
+                <div class="state">
+                    <p>Recovered Cases : <span id="recovered"></span></p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="state">
+                    <p>Critical Cases : <span id="critical"></span></p>
+                </div>
+                <div class="state">
+                    <p>Total Tests : <span id="totalTests"></span></p>
+                </div>
+                <div class="state">
+                    <p>Tests Per Million : <span id="TPM"></span></p>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="state">
+                    <p>CDeaths Per Million : <span id="DPM"></span></p>
+                </div>
+                <div class="state">
+                    <p>Cases Per Million : <span id="CPM"></span></p>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    <script>
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var country = url.searchParams.get("name");
+        if(country == null) {
+            document.location.href = "index.html";
+        }
+        else {
+            showData(country);
+        }
+    </script>
+</html>

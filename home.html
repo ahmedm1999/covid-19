@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>COVID-19 | Home</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+        <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js" integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw==" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+        <link rel="stylesheet" href="home_style.css">
+    </head>
+    <body>
+        <section class="main_section container-fluid m-0">
+            <div class="bar" id="bar">
+                <div class="text-center p-1" id="pageContent">
+                <img src="img/logo-dark.png" alt="logo" id="logo">
+                </div>
+                <div class="__nav" id="__nav">
+                    <ul>
+                        <li><a href="#about">About Covid-19</a></li>
+                        <li><a href="#symptoms">Symptoms</a></li>
+                        <li><a href="#protection">Protection</a></li>
+                        <li><a href="index.html" class="btn"> <i class="las la-calendar mr-2 mb-2"></i>Global Statistics</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main_section_grid">
+                <div class="grid-item">
+                    <div id="userStatic">
+                        <header id="userStaticHeader">
+                            Statistics of <a id="countryDetails"><span class="font-weight-bold" id="userCountry" ></span></a>
+                        </header>
+                        <div id="userStaticFlag">
+                            <img id="userCountryFlag">
+                        </div>
+                        <div id='userStatic__'>
+                            <div>
+                                <span>Total Cases : <span id="totalCases"></span></span>
+                            </div>
+                            <div>
+                                <span>Active Cases : <span id="activeCases"></span></span>
+                            </div>
+                            <div id="__new">
+                                <div class="__cases">
+                                    <header>New Cases</header>
+                                    <p id="todayCases"></p>
+                                </div>
+                                <div class="__deaths">
+                                    <header>New Deaths</header>
+                                    <p id="todayDeaths"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <p>Protect Yourself From Coronavirus</p>
+                    <p>Coronavirus (COVID-19) Global Statistics</p>
+                    <a href="index.html" class="btn theme-btn"> <i class="las la-calendar mr-2 mb-2"></i>See Global Statistics</a>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid about-covid" id="about">
+            <div id="wh-covid">
+                <img src="img/cov.png" alt="">
+                <p style="color: #8a8eaa; font-weight: 600;">
+                    <span class="title-top mb-5">About Covid-19</span><br/>
+                    <span id="wh-header" class="mb-4">What is novel coronavirus?</span><br/>
+                    <span style="color: #8a8eaa">
+                        Coronavirus (<b>COVID-19</b>) which later renamed <em>SARSCoV-2</em>, has been developed in Wuhan, Hubei Province, China, and spread quickly to other areas.
+                    <br>In the first quarter of 2020, the World Health Organization announced the coronavirus (<b>COVID-19</b>) as a pandemic with more than 600,000 cases in 150 countries.
+                    <br><br> COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.
+                    </span>
+                                    
+                </p>
+            </div>
+        </section>
+        
+        <section class="symptoms-area mt-5" id="symptoms">
+            <!-- container -->
+            <div class="container-fluid">
+                <!-- row -->
+                <div class="row">
+                    <!-- col -->
+                    <div>
+                        <div class="title">
+                            <p class="title-top">Covid-19 Symptoms</p>
+                            <span class="mb-4" id="wh-sym-h" style="font-weight: 600;">What are the symptoms?</span><br/>
+                            <span style="color: #8a8eaa; font-weight: 600; font-size: 17px;">
+                                Seek immediate medical attention if you have serious symptoms. Always call before visiting your doctor or health facility.
+                                People with mild symptoms who are otherwise healthy should manage their symptoms at home.<br/><br/>
+                                On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.
+                            </span>
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <div class="points">
+                                        <ul>
+                                            <li><i class="las la-check"></i> Sore Throat</li>
+                                            <li><i class="las la-check"></i> Fever</li>
+                                            <li><i class="las la-check"></i> Runy nose</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="points">
+                                        <ul>
+                                            <li><i class="las la-check"></i> Headache</li>
+                                            <li><i class="las la-check"></i> Fatigue</li>
+                                            <li><i class="las la-check"></i> Dry cough</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /col -->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+            <img src="img/symptoms (1).png" alt="" class="symptom__bg">
+        </section>
+        
+        <section class="container-fluid agenda pt-1" id="protection">
+            <div class="container">
+                <div class="agenda-title text-center">
+                    <p class="title-top">Covid-19 Protection</p><br/>
+                    <span class="agenda-title-txt">
+                        How to Stay Safe ?
+                    </span><br/>
+                    <span id="agenda-span" class="mt-3">If you are healthy, you only need to wear a mask if you are taking care of a person with suspected covid infection.</span>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <div class="card text-center">
+                            <div class="card-img">
+                                <img src="img/mask.png"> 
+                            </div>
+                            <div class="card-title">
+                                <p class="card-title-txt">
+                                    Wear a Mask.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <div class="card text-center">
+                            <div class="card-img">
+                                <img src="img/wash.png" > 
+                            </div>
+                            <div class="card-title">
+                                <p class="card-title-txt">
+                                    Wash Your Hand.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-4">
+                        <div class="card text-center">
+                            <div class="card-img">
+                                <img src="img/cag.png"> 
+                            </div>
+                            <div class="card-title">
+                                <p class="card-title-txt">
+                                    Cough Etiauette.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-img">
+                            <img src="img/touch.png"> 
+                        </div>
+                        <div class="card-title">
+                            <p class="card-title-txt" style="font-size: 20px;">
+                                Don't Touch Eyes,<br/> Nose or Mouth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-img">
+                            <img src="img/avoid.png"> 
+                        </div>
+                        <div class="card-title">
+                            <p class="card-title-txt">
+                                Avoid Contact With<br/> Sick People.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-img">
+                            <img src="img/clean.png"> 
+                        </div>
+                        <div class="card-title">
+                            <p class="card-title-txt">
+                                Clean & Disinfect.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer container-fluid">
+            <div class="container text-center">
+                <a href="index.html" class="btn theme-btn"> <i class="las la-calendar mr-2 mb-2"></i>See Global Statistics</a>
+            </div>
+            <div class="copy mt-5">
+                <p>&copy Copy Right <span id='copy'></span></p>
+            </div>
+        </section>
+        <i class="fas fa-bars" onclick="open_drop()" id="open-drop"></i>
+        <section class="drop-down container-fluid" id="drop">
+            <i class="fas fa-times"  id="close-drop" onclick="close_drop()"></i>
+            <div class="drop-content">
+                <ul>
+                    <li><a href="#about">About Covid-19</a></li>
+                    <li><a href="#symptoms">Symptoms</a></li>
+                    <li><a href="#protection">Protection</a></li>
+                    <li><a href="index.html" class="btn theme-btn"> <i class="las la-calendar mr-2 mb-2"></i>Global Statistics</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <script src="app.js"></script>
+    </body>
+</html>
